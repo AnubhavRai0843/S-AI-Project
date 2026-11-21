@@ -42,6 +42,8 @@ const daysEnumAlt = createEnum(
 const emptyEnum = Object.freeze({});
 const emptyEnumAlt = createEnum();
 ```
+The object literal defines each weekday and its numeric value directly, making it straightforward for a fixed set of values. The alternative uses a `createEnum()` function with rest parameters to accept different lists of keys. It uses `map()` to create an array of key-value pairs, then `Object.fromEntries()` to construct the object before freezing it. This makes the function reusable, but involves additional intermediate array creation and processing. Both approaches produce equivalent frozen objects for the supplied weekday input. The empty enum boundary case also produces an empty frozen object in both approaches.
+
 
 Taking this one step further, one could extract the logic into a function with a variable number of arguments and producing a frozen object. There is very little benefit to this technique, so a better alternative would be to create a simple `class`. After all, enums are more common in object-oriented programming languages, so this sounds like a great fit.
 
