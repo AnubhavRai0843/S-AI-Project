@@ -6,7 +6,7 @@
 ## Tool Versions
 - Node.js: v26.12.1
 - Python: 3.15.2
-- npm: 11.2.0
+- npm: 11.20.0
 
 ## Annotated Operation & Intermediate Values
 Operation under comparison: extracting numeric value from `<input id="quantity-input" type="number" value="42.5" />`.
